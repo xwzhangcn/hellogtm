@@ -2,17 +2,21 @@
 <html>
 <head>
 <title>Hello GTM</title>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 <script>
-  function sendQuery2Httpbin(){
-      
-  }
+  $("#sendQuery2Httpbin").click(function(){
+    $.get("http:://httpbin.org/get?", function(result){
+      $("div").html(result);
+    });
+  });
 </script>
 </head>
 
 <body>
 Hello GTM<br/>
-<input type=button value="access httpbin.org/get" onclick="sendQuery2Httpbin">
-<iframe src="#">
+<input type=button value="access httpbin.org/get" id="sendQuery2Httpbin"><br/>
+<div id="httpbin"></div><br/>
+<iframe>
 <script
 src="http://c.fqtag.com/tag/implement-r.js?org=BB6DvPmytpFndg8atDcN&p=[REFERRER]&a=[U
 SER_AGENT]&cmp=[YOURNAME]&fmt=banner&rt=display&sl=1&fq=1"></script>
