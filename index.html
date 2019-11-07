@@ -14,7 +14,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script>
 $(document).ready(function(){
   $("#sendQuery2Httpbin").click(function(){
-    $.get("http:://httpbin.org/get", function(result){
+    $.get("http:://httpbin.org/get?dataLayer=GTM-NZ45N28", function(result){
       $("#httpbin").html(result);
     });
   });
