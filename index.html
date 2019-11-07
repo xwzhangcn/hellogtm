@@ -16,7 +16,7 @@ $(document).ready(function(){
   $("#sendQuery2Httpbin").click(function(){
     // replace the dataLayer value with google's
     $.get("https://httpbin.org/get?dataLayer=GTM-NZ45N28", function(result){
-      $("#httpbin").html(result);
+      $("#httpbin").value(result);
     });
   });
 });  
