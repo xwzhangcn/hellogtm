@@ -6,7 +6,7 @@
 <script>
   $("#sendQuery2Httpbin").click(function(){
     $.get("http:://httpbin.org/get?", function(result){
-      $("div").html(result);
+      $("#httpbin").html(result);
     });
   });
 </script>
