@@ -14,7 +14,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script>
 $(document).ready(function(){
   $("#sendQuery2Httpbin").click(function(){
-    $.get("http:://httpbin.org/get?dataLayer=GTM-NZ45N28", function(result){
+    // replace the dataLayer value with google's
+    $.get("https://httpbin.org/get?dataLayer=GTM-NZ45N28", function(result){
       $("#httpbin").html(result);
     });
   });
@@ -26,7 +27,9 @@ $(document).ready(function(){
 Hello GTM<br/>
 <input type=button value="access httpbin.org/get" id="sendQuery2Httpbin"><br/>
 <div id="httpbin"></div><br/>
-<iframe src="http://c.fqtag.com/tag/implement-r.js?org=BB6DvPmytpFndg8atDcN&p=[REFERRER]&a=[U
+
+<!-- replace REFERRER,USER_AGENT,YOURNAME with your's and fix iframe  size-->
+<iframe height="60" width="100%"src="http://c.fqtag.com/tag/implement-r.js?org=BB6DvPmytpFndg8atDcN&p=[REFERRER]&a=[U
 SER_AGENT]&cmp=[YOURNAME]&fmt=banner&rt=display&sl=1&fq=1">
 </iframe>
 
